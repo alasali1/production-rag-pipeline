@@ -1,0 +1,30 @@
+# Secrets: passed at runtime via env_file / -e, never baked into the image.
+.env
+.env.*
+!.env.example
+
+# Local state and environments
+.venv/
+.chroma/
+.git/
+.gitignore
+**/__pycache__/
+**/*.py[oc]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Archives, editor and OS files
+*.zip
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Not needed in the image
+scripts/
+ai_prompt_log.md
+Dockerfile
+compose.yaml
+.dockerignore

@@ -1,0 +1,29 @@
+# docker compose up --build        -> http://localhost:8501
+#
+# Requires a .env file (copy .env.example) with OPENAI_API_KEY; TAVILY_API_KEY is recommended
+# (the keyless DuckDuckGo fallback is unreliable). The vector index persists in the
+# `chroma-data` volume and is built automatically on first page load if empty.
+
+services:
+  app:
+    build:
+      context: .
+      target: runtime
+    image: production-rag-pipeline:latest
+    env_file:
+      - path: .env
+        required: true
+    environment:
+      CHROMA_DIR: /data/chroma
+    ports:
+      # Bound to localhost only: the UI has no authentication and spends your OpenAI credits.
+      # Change to "8501:8501" only behind an authenticating reverse proxy.
+      - "127.0.0.1:8501:8501"
+    volumes:
+      - chroma-data:/data/chroma
+      # Uncomment to edit docs without rebuilding (then click "Rebuild index" in the sidebar):
+      # - ./docs:/app/docs:ro
+    restart: unless-stopped
+
+volumes:
+  chroma-data:

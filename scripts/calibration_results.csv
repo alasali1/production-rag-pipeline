@@ -1,0 +1,55 @@
+label,query,rewritten,top_confidence,top_logit,top_chunk
+in_domain,How long does each canary stage bake in production?,canary stage bake duration in production,0.9971,5.83,03-deployments-environments.md#production-rollouts
+in_domain,How long must a release run in staging before it can be promoted to prod?,release duration in staging before promotion to production,0.6021,0.41,03-deployments-environments.md#promotion
+in_domain,How many releases does Keel keep for rollbacks?,Keel rollback release retention policy,0.9894,4.54,03-deployments-environments.md#rollbacks
+in_domain,When is the weekly deploy freeze?,weekly deploy freeze schedule,0.9991,7.03,03-deployments-environments.md#deploy-freezes
+in_domain,What is the minimum number of replicas for web processes in prod?,minimum number of replicas for web processes in production,0.4734,-0.11,02-getting-started.md#manifest-fields
+in_domain,What happens if canary p99 latency gets too high during a rollout?,canary p99 latency high during rollout consequences,0.9908,4.68,03-deployments-environments.md#production-rollouts
+in_domain,How do I roll back a bad release?,roll back a bad release,0.9405,2.76,03-deployments-environments.md#rollbacks
+in_domain,How long are CLI session tokens valid?,CLI session token validity duration,0.9959,5.49,02-getting-started.md#authenticate
+in_domain,"hey, how do I pin the keel CLI version in CI?",pin keel CLI version in CI,0.9995,7.65,02-getting-started.md#install-the-cli
+in_domain,What is the maximum size of a secret?,maximum size of a secret,0.9325,2.63,04-configuration-secrets.md#secrets
+in_domain,After how many days does a secret trigger an age warning?,secret age warning trigger days,0.6324,0.54,04-configuration-secrets.md#rotation
+in_domain,How often are addon database credentials rotated?,addon database credentials rotation frequency,0.9837,4.1,04-configuration-secrets.md#addon-credentials
+in_domain,What is the API rate limit for service tokens?,API rate limit for service tokens,0.9984,6.43,05-api-reference.md#rate-limits
+in_domain,How long are idempotency keys retained?,idempotency key retention duration,0.9972,5.87,05-api-reference.md#idempotency
+in_domain,Which webhook events can a project subscribe to?,webhook events project subscription options,0.6289,0.53,05-api-reference.md#webhooks
+in_domain,How long are prod logs retained?,prod logs retention period,0.9789,3.84,06-observability.md#traces
+in_domain,How often are custom metrics scraped?,custom metrics scraping frequency,0.8809,2.0,06-observability.md#metrics
+in_domain,What's the active time series limit per project?,active time series limit per project,0.9971,5.82,09-troubleshooting-error-codes.md#6xxx-observability
+in_domain,What is the trace sampling rate in prod?,trace sampling rate in prod,0.9979,6.17,06-observability.md#traces
+in_domain,How much error budget does a 99.9% SLO give over 30 days?,error budget for 99.9% Service Level Objective over 30 days SLO,0.9995,7.7,06-observability.md#slos
+in_domain,What counts as a SEV1 incident?,What counts as a SEV1 incident?,0.9462,2.87,10-security-access-control.md#reporting-security-issues
+in_domain,What does the Incident Commander do during an incident?,Incident Commander responsibilities during an incident,0.9935,5.03,07-incident-response.md#roles
+in_domain,What does error KEEL-2302 mean?,error KEEL-2302 meaning,0.9929,4.94,05-api-reference.md#errors
+in_domain,"my deploy keeps failing with KEEL-2301, what should I check?",deploy failing with KEEL-2301 troubleshooting steps,0.9997,7.97,09-troubleshooting-error-codes.md#my-deploy-fails-with-keel-2301-healthcheck-failing
+in_domain,How do I fix 'too many connections' errors from PostgreSQL?,fix 'too many connections' errors PostgreSQL,0.9992,7.16,09-troubleshooting-error-codes.md#too-many-connections-from-postgresql
+in_domain,How do I do a point-in-time restore of my Postgres database?,point-in-time restore Postgres database,0.9993,7.29,08-database-operations.md#restores
+in_domain,Which regions does Keel run in?,Keel supported regions,0.9756,3.69,01-platform-overview.md#data-plane
+in_domain,Which Python versions do the Keel base images support?,Python versions supported by Keel base images,0.9994,7.48,01-platform-overview.md#supported-runtimes
+near_domain,Does Keel have a Terraform provider?,Keel Terraform provider documentation,0.3715,-0.53,01-platform-overview.md#keel-platform-overview
+near_domain,How much does Keel cost per service per month?,Keel cost per service per month,0.1185,-2.01,09-troubleshooting-error-codes.md#requests-return-429-from-the-edge
+near_domain,Can I run GPU workloads on Keel?,Run GPU workloads on Keel,0.6234,0.5,10-security-access-control.md#security-and-access-control
+near_domain,How do I provision a MySQL database on Keel?,provision MySQL database on Keel,0.997,5.8,08-database-operations.md#database-operations-managed-postgresql
+near_domain,Does Keel support blue-green deployments?,Keel blue-green deployments support,0.2913,-0.89,01-platform-overview.md#keel-platform-overview
+near_domain,Is there a GraphQL version of the Keel API?,GraphQL version of the Keel API,0.9936,5.05,05-api-reference.md#keel-rest-api-reference
+near_domain,Can I attach a Kafka addon to my Keel service?,Attach Kafka addon to Keel service,0.435,-0.26,08-database-operations.md#provisioning
+near_domain,Does Keel provide Helm charts for self-hosting?,Keel Helm charts for self-hosting,0.191,-1.44,01-platform-overview.md#networking
+near_domain,Who founded the company that built Keel?,founder of the company that built Keel,0.6092,0.44,01-platform-overview.md#keel-platform-overview
+near_domain,Does Keel integrate with the Istio service mesh?,Keel integration with Istio service mesh,0.0451,-3.05,01-platform-overview.md#networking
+adjacent,How do I configure a Kubernetes HorizontalPodAutoscaler?,configure Kubernetes Horizontal Pod Autoscaler,0.2999,-0.85,03-deployments-environments.md#autoscaling
+adjacent,What is the default port for Redis?,default port for Redis,0.1018,-2.18,04-configuration-secrets.md#addon-credentials
+adjacent,How do I write a HEALTHCHECK instruction in a Dockerfile?,write HEALTHCHECK instruction in Dockerfile,0.2571,-1.06,09-troubleshooting-error-codes.md#my-deploy-fails-with-keel-2301-healthcheck-failing
+adjacent,How do I create a Python virtual environment with venv?,create Python virtual environment with venv,0.0001,-9.11,02-getting-started.md#create-a-service
+adjacent,What is the difference between TCP and UDP?,difference between TCP and UDP,0.0,-10.61,10-security-access-control.md#network-policy
+adjacent,How do I rebase a git branch onto main?,rebase git branch onto main,0.0012,-6.7,08-database-operations.md#restores
+adjacent,What does HTTP status code 418 mean?,HTTP status code 418 meaning,0.0002,-8.5,09-troubleshooting-error-codes.md#requests-return-429-from-the-edge
+adjacent,How do I write a SQL window function?,write SQL window function,0.0014,-6.54,08-database-operations.md#expand-contract-pattern
+general,Which country won the 2022 FIFA World Cup?,2022 FIFA World Cup winner country,0.0,-10.92,08-database-operations.md#provisioning
+general,What is the capital of Australia?,capital of Australia,0.0,-11.07,01-platform-overview.md#keel-platform-overview
+general,How do I bake sourdough bread?,bake sourdough bread instructions,0.0,-11.15,04-configuration-secrets.md#rotation
+general,Who wrote Pride and Prejudice?,Pride and Prejudice author information,0.0,-11.29,04-configuration-secrets.md#configuration-precedence
+general,What's the weather like in Paris in April?,weather Paris April,0.0,-11.26,07-incident-response.md#regional-failover
+general,How many moons does Jupiter have?,Jupiter number of moons,0.0,-11.41,05-api-reference.md#pagination
+general,What is the best way to learn guitar?,best way to learn guitar,0.0,-11.14,04-configuration-secrets.md#configuration-precedence
+general,Explain photosynthesis simply.,photosynthesis explanation simple,0.0,-11.37,01-platform-overview.md#keel-platform-overview
